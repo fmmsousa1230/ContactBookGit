@@ -100,6 +100,18 @@ public class ContactBook {
         contacts = tmp;
     }
 
+    public boolean hasSameNumbers() {
+
+        for(int i=0;i<counter;i++){
+            for(int j=1;j<contacts.length;j++){
+                if(contacts[j].getPhone()==contacts[i].getPhone()){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     public void initializeIterator() {
         currentContact = 0;
     }
