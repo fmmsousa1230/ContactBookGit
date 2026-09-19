@@ -103,7 +103,7 @@ public class ContactBook {
     public boolean hasSameNumbers() {
 
         for(int i=0;i<counter;i++){
-            for(int j=1;j<contacts.length;j++){
+            for(int j=i+1;j<counter;j++){
                 if(contacts[j].getPhone()==contacts[i].getPhone()){
                     return true;
                 }
