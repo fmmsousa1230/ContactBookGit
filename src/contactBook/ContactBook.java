@@ -73,6 +73,26 @@ public class ContactBook {
         return result;
     }
 
+    public String getNameByPhone(int number) {
+        int index = searchPhone(number);
+        if(index == -1) return null;
+        return contacts[index].getName();
+    }
+
+    private int searchPhone(int number) {
+        int i = 0;
+        int result = -1;
+        boolean found = false;
+        while (i<counter && !found)
+            if (contacts[i].getPhone() ==  number)
+                found = true;
+            else
+                i++;
+        if (found) result = i;
+        return result;
+    }
+
+
     private void resize() {
         Contact tmp[] = new Contact[2*contacts.length];
         for (int i=0;i<counter; i++)

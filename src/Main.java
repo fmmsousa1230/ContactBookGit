@@ -26,7 +26,7 @@ public class Main {
     public static final String CONTACT_UPDATED = "contactBook.Contact updated.";
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
     public static final String QUIT_MSG = "Goodbye!";
-    public static final String CONTACT_NOT_FOUND = "contactBook.Number does not exists.";
+    public static final String CONTACT_NOT_FOUND = "Phone number does not exist.";
     public static final String COMMAND_ERROR = "Unknown command.";
 
     public static void main(String[] args) {
@@ -57,6 +57,8 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
+                case GET_NUMBER:
+                    getNumber(in,cBook);
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -150,5 +152,12 @@ public class Main {
             }
         }
         else System.out.println(BOOK_EMPTY);
+    }
+
+    private static void getNumber(Scanner in, ContactBook cBook) {
+        int number = in.nextInt();
+        String name = cBook.getNameByPhone(number);
+        if(name == null) System.out.println(CONTACT_NOT_FOUND);
+        else System.out.println(name);
     }
 }
