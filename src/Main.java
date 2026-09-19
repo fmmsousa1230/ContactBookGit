@@ -162,6 +162,7 @@ public class Main {
 
     private static void getNumber(Scanner in, ContactBook cBook) {
         int number = in.nextInt();
+        in.nextLine();
         String name = cBook.getNameByPhone(number);
         if(name == null) System.out.println(CONTACT_NOT_FOUND);
         else System.out.println(name);
