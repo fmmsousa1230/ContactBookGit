@@ -17,6 +17,7 @@ public class Main {
     public static final String EQUAL_PHONE  = "EP";
     public static final String QUIT           = "Q";
 
+
     //Constantes que definem as mensagens para o utilizador
     public static final String CONTACT_EXISTS = "contactBook.Contact already exists.";
     public static final String NAME_NOT_EXIST = "contactBook.Contact does not exist.";
@@ -25,6 +26,7 @@ public class Main {
     public static final String CONTACT_UPDATED = "contactBook.Contact updated.";
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
     public static final String QUIT_MSG = "Goodbye!";
+    public static final String CONTACT_NOT_FOUND = "contactBook.Number does not exists.";
     public static final String COMMAND_ERROR = "Unknown command.";
 
     public static void main(String[] args) {
